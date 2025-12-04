@@ -91,7 +91,7 @@ public class EslFrameDecoder extends ReplayingDecoder<EslFrameDecoder.State> {
                 while (!reachedDoubleLF) {
                     // this will read or fail
                     String headerLine = readToLineFeedOrFail(buffer, maxHeaderSize);
-                    log.debug("read header line [{}]", headerLine);
+//                    log.debug("read header line [{}]", headerLine);
                     if (!headerLine.isEmpty()) {
                         // split the header line
                         String[] headerParts = HeaderParser.splitHeader(headerLine);
@@ -114,7 +114,7 @@ public class EslFrameDecoder extends ReplayingDecoder<EslFrameDecoder.State> {
                 // have read all headers - check for content-length
                 if (currentMessage.hasContentLength()) {
                     checkpoint(State.READ_BODY);
-                    log.debug("have content-length, decoding body ..");
+//                    log.debug("have content-length, decoding body ..");
                     //  force the next section
 
                     break;
@@ -139,7 +139,7 @@ public class EslFrameDecoder extends ReplayingDecoder<EslFrameDecoder.State> {
                 // most bodies are line based, so split on LF
                 while (bodyBytes.isReadable()) {
                     String bodyLine = readLine(bodyBytes, contentLength);
-                    log.debug("read body line [{}]", bodyLine);
+//                    log.debug("read body line [{}]", bodyLine);
                     currentMessage.addBodyLine(bodyLine);
                 }
 

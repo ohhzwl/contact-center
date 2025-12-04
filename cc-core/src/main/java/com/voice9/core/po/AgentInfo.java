@@ -164,6 +164,14 @@ public class AgentInfo extends Agent {
      */
     private String token;
 
+    private String wsServer;
+
+    private String webrtcServer;
+
+    private String sipServer;
+
+    private String sipPwd;
+
     public String getRemoteAddress() {
         return remoteAddress;
     }
@@ -417,5 +425,37 @@ public class AgentInfo extends Agent {
     @Override
     public String toString() {
         return "AgentInfo{" + ", groupIds=" + groupIds + ", sips=" + sips + ", skillAgents=" + skillAgents + ", callId=" + callId + ", deviceId='" + deviceId + '\'' + ", loginTime=" + loginTime + ", agentState=" + agentState + ", loginType=" + loginType + ", workType=" + workType + ", stateTime=" + stateTime + ", beforeState=" + beforeState + ", beforeTime=" + beforeTime + ", logoutTime=" + logoutTime + ", maxReadyTime=" + maxReadyTime + ", totalReadyTime=" + totalReadyTime + ", maxTalkTime=" + maxTalkTime + ", totalTalkTime=" + totalTalkTime + ", totalRingTimes=" + totalRingTimes + ", totalAnswerTimes=" + totalAnswerTimes + '}';
+    }
+
+    public String getWsServer() {
+        return wsServer;
+    }
+
+    public void setWsServer(String wsServer) {
+        this.wsServer = wsServer;
+    }
+
+    public String getWebrtcServer() {
+        return webrtcServer;
+    }
+
+    public void setWebrtcServer(String webrtcServer) {
+        this.webrtcServer = webrtcServer;
+    }
+
+    public String getSipServer() {
+        return sipServer;
+    }
+
+    public void setSipServer(String sipServer) {
+        this.sipServer = sipServer;
+    }
+
+    public String getSipPwd() {
+        return sipPwd;
+    }
+
+    public void setSipPwd(String sipPwd) {
+        this.sipPwd = sipPwd;
     }
 }

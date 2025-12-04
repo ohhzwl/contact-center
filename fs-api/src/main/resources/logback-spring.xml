@@ -36,14 +36,14 @@
 
     <!-- 开发测试环境 -->
     <springProfile name="dev">
-        <root level="INFO">
+        <root level="DEBUG">
             <appender-ref ref="CONSOLE"/>
             <appender-ref ref="FILE"/>
         </root>
     </springProfile>
     <!-- 生产环境 -->
     <springProfile name="prod|nacos">
-        <root level="INFO">
+        <root level="DEBUG">
             <appender-ref ref="FILE"/>
             <!--<appender-ref ref="LOGSTASH"/>-->
         </root>

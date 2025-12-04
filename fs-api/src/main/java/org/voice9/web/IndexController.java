@@ -137,6 +137,10 @@ public class IndexController {
         agentInfo.setLoginType(agentLoginVo.getLoginType());
         agentInfo.setWorkType(agentLoginVo.getWorkType());
         agentInfo.setWebHook(agentLoginVo.getWebHook());
+        agentInfo.setWsServer("ws://localhost:7250/ws");
+        agentInfo.setWebrtcServer("wss://121.43.122.41:8989/");
+        agentInfo.setSipServer("121.43.122.41:5060");
+        agentInfo.setSipPwd("test");
         agentInfo.setToken(token);
         cacheService.refleshAgentToken(agentInfo.getAgentKey(), token);
         cacheService.addAgentInfo(agentInfo);
