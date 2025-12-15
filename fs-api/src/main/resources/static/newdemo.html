@@ -59,12 +59,14 @@
         margin-bottom: 20px;
     }
 </style>
-<script src="../static/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="../static/libs/crypto-js/4.1.1/core.js"></script>
-<script src="../static/libs/crypto-js/4.1.1/sha256.js"></script>
-<script src="../static/2.4.0/voice9.sdk.js"></script>
+<script src="libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="libs/crypto-js/4.1.1/core.js"></script>
+<script src="libs/crypto-js/4.1.1/sha256.js"></script>
+<script src="2.4.0/voice9.sdk.js"></script>
 
 <script type="module">
+    import Voice9 from './2.4.0/voice9.sdk.js'
+
     const voice9 = new Voice9();
 
     let domain = window.location.origin;
@@ -272,7 +274,7 @@
             <legend>登录参数</legend>
             <div class="d-flex align-center">
                 账号：<input name="agentKey" id="agentKey" value="1001@test" style="width: 90px"/>
-                密码：<input name="passwd" id="passwd" type="password" value="12345678" style="width: 90px"/>
+                密码：<input name="passwd" id="passwd" type="password" value="123456" style="width: 90px"/>
                 分机：<input name="agentCode" id="agentCode" style="width: 90px"/>
                 接听方式：
                 <select id="loginType" name="loginType">
